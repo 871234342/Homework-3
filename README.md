@@ -20,8 +20,7 @@ I am using CUDA verion 10.2 and torch version 1.7.0. You can either run the foll
 
 `pip install torch torchvision`
 
-`python -m pip install detectron2 -f \
-  https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html`
+`python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html`
 
 ### Data Preparation
 The data should be placed as follows:
@@ -45,10 +44,10 @@ repo
 The traing and testing images and thier repective annotation files can be downloaded [here](https://drive.google.com/drive/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK).
 
 ### Training
-To train, please download the pretrained weight [here](https://drive.google.com/file/d/16JwAXozDpqjoWRE1MySUKH0JdkstXMqf/view?usp=sharing) and put it beside train.py. Simply run train.py. The weights should be saved in 'logs/numbers' folder. There will be several file saving weights at different training process. The batch_size is set to be 3. Make it smaller in numbers.yml if memory is not sufficent.
+To train, please download the pretrained weight [here](https://drive.google.com/file/d/1Q8tRJi7L8Dz2MKnnTZRrcQHixbAJTo_-/view?usp=sharing) and put it beside train.py. Simply run train.py. The weights should be saved in 'output' folder with name 'model_final.pth'. There will be several file saving weights at different training process. The batch_size is set to be 2. It can be changed in line 58, where 'cfg.SOLVER.IMS_PER_BATCH = batch_size'. Make it smaller if needed. The trained model will also be used to infer the test images after training and the prediction will also be made.
 
 ### Inference
-for inference, please download the weights file [here](https://drive.google.com/file/d/1t9W1wxUjfBOTtGo0I7-tlpgdlKqvSM01/view?usp=sharing) and put it beside infer.py. Simply run infer.py and predictions.json containing images file names and their corresponding predictions will be created.
+for inference, please download the weights file [here](https://drive.google.com/file/d/1rFZY6UBCGqb9JECkEhgCOkKcvOKZnSTF/view?usp=sharing) and put it in output folder. Simply run infer.py and predictions.json will be created.
 
 ### Citation
-[Yet Anothor EfficientDet Pytorch](https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch)
+[Detectron2](https://github.com/facebookresearch/detectron2)
