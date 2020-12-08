@@ -1,7 +1,7 @@
 # Homework-3 - Tiny Pascal VOC dataset
 
 This model is for instance segmentation for the Tiny Pascal VOC dataset.
-This repo is done with [this](https://github.com/facebookresearch/detectron2).
+This repo is based on [Detectron2](https://github.com/facebookresearch/detectron2).
 
 ### Hardware
 - Ubuntu 18.04.5 LTS
