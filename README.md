@@ -44,7 +44,7 @@ repo
 The traing and testing images can be downloaded [here](https://drive.google.com/drive/folders/1fGg03EdBAxjFumGHHNhMrz2sMLLH04FK).
 
 ### Training
-To train, please download the pretrained weight [here](https://drive.google.com/file/d/1Q8tRJi7L8Dz2MKnnTZRrcQHixbAJTo_-/view?usp=sharing) and put it beside train.py. Simply run train.py. The weights should be saved in 'output' folder with name 'model_final.pth'. There will be several file saving weights at different training process. The batch_size is set to be 2. It can be changed in line 58, where 'cfg.SOLVER.IMS_PER_BATCH = batch_size'. Make it smaller if needed. The trained model will also be used to infer the test images after training and the prediction will also be made.
+To train, please download the pretrained weight [here](https://dl.fbaipublicfiles.com/detectron2/ImageNetPretrained/FAIR/X-101-32x8d.pkl) and put it beside train.py. Simply run train.py. The weights should be saved in 'output' folder with name 'model_final.pth'. There will be several file saving weights at different training process. The batch_size is set to be 2. It can be changed in line 58, where 'cfg.SOLVER.IMS_PER_BATCH = batch_size'. Make it smaller if needed. The trained model will also be used to infer the test images after training and the prediction will also be made.
 
 ### Inference
 for inference, please download the weights file [here](https://drive.google.com/file/d/1rFZY6UBCGqb9JECkEhgCOkKcvOKZnSTF/view?usp=sharing) and put it in output folder. Simply run infer.py and predictions.json will be created.
