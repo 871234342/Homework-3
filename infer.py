@@ -36,8 +36,9 @@ coco_dt = []
 
 print("start inference")
 for imgid in cocoGt.imgs:
-    image = cv2.imread("test_images/" + cocoGt.loadImgs(ids=imgid)[0]['file_name'])[:,:,::-1] # load image
-    out = predictor(image) # run inference
+    file_name = cocoGt.loadImgs(ids=imgid)[0]['file_name']
+    image = cv2.imread("test_images/" + file_name)[:, :, ::-1]  # load image
+    out = predictor(image)  # run inference
     anno = out['instances'].to('cpu').get_fields()
     scores = anno['scores'].numpy()
     classes = anno['pred_classes'].numpy()
@@ -47,7 +48,7 @@ for imgid in cocoGt.imgs:
         pred = {}
         pred['image_id'] = imgid
         pred['category_id'] = int(classes[i]) + 1
-        pred['segmentation'] = binary_mask_to_rle(masks[i,:,:])
+        pred['segmentation'] = binary_mask_to_rle(masks[i, :, :])
         pred['score'] = float(scores[i])
         coco_dt.append(pred)
 
