@@ -18,11 +18,9 @@ To reproduce my submission without training, do the following:
 This repo uses Detectron2 from facebook research team. Please install it first before running this repo.
 I am using CUDA verion 10.2 and torch version 1.7.0. You can either run the following command or go to [Detectron2](https://github.com/facebookresearch/detectron2/blob/master/INSTALL.md) and [Pytorch](https://pytorch.org/) to install.
 
-`
-pip install torch torchvision
-python -m pip install detectron2 -f \
-  https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
-`
+`pip install torch torchvision`
+`python -m pip install detectron2 -f \
+  https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html`
 
 ### Data Preparation
 The data should be placed as follows:
